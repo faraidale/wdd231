@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    #menu-button { display: none; }
+    nav { display: flex; flex-direction: row; justify-content: flex-start; gap: 2rem; padding: 0 2rem; }
+    nav a { border-bottom: none; display: inline-block; padding: 1rem 1.5rem; }
+    .grid-container { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+    .courses { grid-column: 1 / span 2; }
+    #course-list { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .course-card { flex: 1 1 200px; max-width: 30%; }
+}
