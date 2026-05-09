@@ -1,0 +1,35 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #ecf0f1;
+    --accent: #3498db;
+    --completed: #2ecc71; /* Green for completed */
+    --incomplete: #e74c3c; /* Red for incomplete */
+    --text-dark: #333;
+}
+body { font-family: Roboto, Arial, sans-serif; margin: 0; padding: 0; background-color: #fff; color: var(--text-dark); }
+header { background-color: var(--primary); color: #fff; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+header img { width: 50px; height: auto; border-radius: 5px; }
+header span { font-size: 1.5rem; font-weight: bold; }
+#menu-button { background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; padding: 0.5rem; }
+nav { display: none; flex-direction: column; background-color: #34495e; }
+nav.open { display: flex; }
+nav a { padding: 1rem; color: #fff; text-decoration: none; text-align: center; border-bottom: 1px solid #455a64; display: block; }
+nav a:hover { background-color: #455a64; }
+nav a.active { background-color: rgba(0,0,0,0.4); font-weight: bold; } /* Wayfinding */
+main { padding: 1rem; max-width: 1200px; margin: 0 auto; }
+h1 { text-align: left; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+.card { background-color: var(--secondary); margin-bottom: 1rem; padding: 1rem; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card h2 { background-color: var(--primary); color: #fff; padding: 0.75rem; margin: -1rem -1rem 1rem -1rem; text-align: center; border-radius: 5px 5px 0 0; font-size: 1.2rem; }
+.photo img { width: 100%; max-width: 250px; display: block; margin: 0 auto; border-radius: 5px;}
+.filter-buttons { display: flex; justify-content: space-around; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;}
+.filter-buttons button { padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; background-color: var(--primary); color: white; font-weight: bold; font-size: 1rem; flex: 1; min-width: 80px;}
+.filter-buttons button:hover { background-color: var(--accent); }
+#course-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.course-card { padding: 1rem; text-align: center; border-radius: 5px; font-weight: bold; color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.course-card.completed { background-color: var(--completed); color: #000; }
+.course-card.incomplete { background-color: var(--incomplete); }
+#total-credits { font-weight: bold; text-align: center; margin-top: 1.5rem; font-size: 1.1rem; }
+footer { background-color: var(--primary); color: #fff; text-align: center; padding: 1.5rem 1rem; margin-top: 2rem;}
+.socials { margin-bottom: 1rem; }
+.socials a { color: #fff; margin: 0 10px; text-decoration: none; border-bottom: 1px solid transparent; }
+.socials a:hover { border-bottom: 1px solid #fff; }
