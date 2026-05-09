@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farai Rwambiwa - WDD 231 - Course Home Page</title>
+    <meta name="description" content="WDD 231 Course Home Page for Farai Rwambiwa">
+    <meta name="author" content="Farai Rwambiwa">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Profile Logo" width="50" height="50">
+        <span>Farai Rwambiwa</span>
+        <button id="menu-button" aria-label="Menu">☰</button>
+    </header>
+    <nav id="nav-menu">
+        <a href="#" class="active">Home</a>
+        <a href="chamber/index.html">Chamber Project</a>
+        <a href="final/index.html">Final Project</a>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section class="card about">
+                <h2>About Me</h2>
+                <p>Hello! I am Farai. I am a software development student with a passion for coding. I've tackled C#, Python, and I am excited to master JavaScript and frontend web development.</p>
+            </section>
+            <section class="card photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Farai Rwambiwa" width="200" height="200" loading="lazy">
+            </section>
+            <section class="card courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filter-buttons">
+                    <button id="all-btn">All</button>
+                    <button id="cse-btn">CSE</button>
+                    <button id="wdd-btn">WDD</button>
+                </div>
+                <div id="course-list"></div>
+                <p id="total-credits">The total credits for courses listed above is: <span>0</span></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/faraidale" target="_blank" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Farai Rwambiwa | Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
