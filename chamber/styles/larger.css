@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    #menu-button { display: none; }
+    nav { display: flex; flex-direction: row; justify-content: center; gap: 2rem; }
+    nav a { border-bottom: none; }
+    
+    /* Grid View strictly enforced for desktop */
+    #directory-container.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    
+    /* List View adjusted for desktop */
+    #directory-container.list section { flex-direction: row; justify-content: space-between; align-items: center; }
+    
+    footer { display: flex; justify-content: space-around; align-items: center; text-align: left; }
+}
