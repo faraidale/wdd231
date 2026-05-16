@@ -1,0 +1,31 @@
+:root {
+    --primary-dark: #000000; /* Contrast fix */
+    --primary-light: #ffffff;
+    --accent: #0056b3; 
+}
+body { font-family: Roboto, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--primary-light); color: var(--primary-dark); }
+header { background-color: var(--primary-dark); color: var(--primary-light); padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+.logo-box { display: flex; align-items: center; gap: 10px; }
+.logo-box h1 { font-size: 1.2rem; margin: 0; }
+#menu-button { background: none; border: none; color: var(--primary-light); font-size: 2rem; cursor: pointer; }
+nav { display: none; flex-direction: column; background-color: #222; }
+nav.open { display: flex; }
+nav a { padding: 1rem; color: var(--primary-light); text-decoration: none; text-align: center; border-bottom: 1px solid #444; }
+nav a:hover { background-color: #444; }
+nav a.active { background-color: var(--accent); font-weight: bold; } /* Wayfinding Fix */
+
+main { padding: 1rem; max-width: 1200px; margin: 0 auto; }
+.view-toggles { text-align: center; margin-bottom: 1rem; }
+.view-toggles button { padding: 0.5rem 1rem; margin: 0 5px; cursor: pointer; background-color: var(--primary-dark); color: var(--primary-light); border: none; border-radius: 5px; }
+
+/* Grid Layout (Default Mobile) */
+#directory-container { display: flex; flex-direction: column; gap: 1rem; }
+#directory-container section { background: #f9f9f9; padding: 1.5rem; text-align: center; border: 1px solid #ddd; border-radius: 8px; }
+#directory-container img { max-width: 100px; height: auto; }
+#directory-container a { color: var(--accent); font-weight: bold; }
+
+/* List Layout - HIDDEN IMAGES per rubric */
+#directory-container.list section { display: flex; flex-direction: column; text-align: left; padding: 1rem; border: none; border-bottom: 1px solid #ccc; background: transparent; }
+#directory-container.list section img { display: none; } /* Hides images in list view */
+
+footer { background-color: var(--primary-dark); color: var(--primary-light); text-align: center; padding: 1.5rem 1rem; margin-top: 2rem; font-size: 0.9rem; }
