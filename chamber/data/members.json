@@ -1,57 +1,57 @@
 [
   {
-    "name": "Matobo Tech Solutions",
-    "address": "12 Fife Street, Bulawayo",
-    "phone": "+263 29 220 1111",
-    "url": "https://www.matobotech.co.zw",
+    "name": "Sunshine City Tech Solutions",
+    "address": "Samora Machel Ave, Harare",
+    "phone": "+263 24 270 1111",
+    "url": "https://www.sunshinecitytech.co.zw",
     "image": "images/member1.webp",
     "level": 3
   },
   {
-    "name": "Zambezi River Adventures",
-    "address": "44 Jason Moyo Ave, Bulawayo",
-    "phone": "+263 29 220 2222",
-    "url": "https://www.zambezitours.co.zw",
+    "name": "Mukuvisi Safari Tours",
+    "address": "Borrowdale Road, Harare",
+    "phone": "+263 24 270 2222",
+    "url": "https://www.mukuvisisafaris.co.zw",
     "image": "images/member2.webp",
     "level": 2
   },
   {
-    "name": "Bulawayo Fresh Produce",
-    "address": "City Market, Bulawayo",
-    "phone": "+263 29 220 3333",
-    "url": "https://www.byofresh.co.zw",
+    "name": "Harare Fresh Produce",
+    "address": "Mbare Musika, Harare",
+    "phone": "+263 24 270 3333",
+    "url": "https://www.hre-fresh.co.zw",
     "image": "images/member3.webp",
     "level": 1
   },
   {
-    "name": "Highlands Cafe",
-    "address": "8th Avenue, Bulawayo",
-    "phone": "+263 29 220 4444",
-    "url": "https://www.highlandscafe.co.zw",
+    "name": "Jacaranda Coffee Shop",
+    "address": "Avondale, Harare",
+    "phone": "+263 24 270 4444",
+    "url": "https://www.jacarandacoffee.co.zw",
     "image": "images/member4.webp",
     "level": 2
   },
   {
-    "name": "Khami Ruins Logistics",
-    "address": "Plumtree Road, Bulawayo",
-    "phone": "+263 29 220 5555",
-    "url": "https://www.khamilogistics.co.zw",
+    "name": "Kopje Logistics",
+    "address": "Workington, Harare",
+    "phone": "+263 24 270 5555",
+    "url": "https://www.kopjelogistics.co.zw",
     "image": "images/member5.webp",
     "level": 3
   },
   {
-    "name": "Baobab Accounting",
-    "address": "15th Avenue, Bulawayo",
-    "phone": "+263 29 220 6666",
-    "url": "https://www.baobabacc.co.zw",
+    "name": "Msasa Accounting",
+    "address": "Msasa, Harare",
+    "phone": "+263 24 270 6666",
+    "url": "https://www.msasaacc.co.zw",
     "image": "images/member6.webp",
     "level": 1
   },
   {
-    "name": "Jacaranda Design Studios",
-    "address": "Suburbs, Bulawayo",
-    "phone": "+263 29 220 7777",
-    "url": "https://www.jacarandadesign.co.zw",
+    "name": "Zim-Design Studios",
+    "address": "Mount Pleasant, Harare",
+    "phone": "+263 24 270 7777",
+    "url": "https://www.zimdesign.co.zw",
     "image": "images/member7.webp",
     "level": 3
   }
