@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulawayo Chamber of Commerce - Directory</title>
+    <meta name="description" content="Business directory for the Bulawayo Chamber of Commerce.">
+    <meta name="author" content="Farai Rwambiwa">
+    
+    <meta property="og:title" content="Bulawayo Chamber of Commerce Directory">
+    <meta property="og:description" content="Discover local businesses and services in the Bulawayo area.">
+    <meta property="og:image" content="https://faraidale.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://faraidale.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/favicon.ico" alt="Chamber Logo" width="50" height="50">
+            <h1>Bulawayo Chamber</h1>
+        </div>
+        <button id="menu-button" aria-label="Menu">☰</button>
+    </header>
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="directory.html" class="active">Directory</a> <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+    <main>
+        <h2>Business Directory</h2>
+        <div class="view-toggles">
+            <button id="grid-btn">⏹ Grid</button>
+            <button id="list-btn">📄 List</button>
+        </div>
+        <div id="directory-container" class="grid"></div> 
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>Bulawayo Chamber of Commerce</p>
+            <p>123 Jason Moyo Ave, Bulawayo</p>
+            <p>info@bulawayochamber.co.zw</p>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Farai Rwambiwa | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
