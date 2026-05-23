@@ -11,3 +11,28 @@
     
     footer { display: flex; justify-content: space-around; align-items: center; text-align: left; }
 }
+
+
+/* --- W03 HOME PAGE: DESKTOP --- */
+.hero-image {
+    height: 500px; 
+}
+
+.hero-overlay {
+    width: 60%;
+    padding: 3rem;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
