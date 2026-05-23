@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harare Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Harare Chamber of Commerce. Empowering local businesses.">
+    <meta name="author" content="Farai Rwambiwa">
+    
+    <meta property="og:title" content="Harare Chamber of Commerce">
+    <meta property="og:description" content="Connecting and growing businesses in the Harare area.">
+    <meta property="og:image" content="https://faraidale.github.io/wdd231/images/profile.jpg">
+    <meta property="og:url" content="https://faraidale.github.io/wdd231/chamber/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/home.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.svg" alt="Chamber Logo" width="50" height="50">
+            <span>Harare Chamber</span>
+        </div>
+        <button id="menu-button" aria-label="Menu">☰</button>
+    </header>
+    
+    <nav id="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Harare Cityscape" class="hero-image" width="100%" height="auto">
+            <div class="hero-overlay">
+                <h1>Welcome to the Harare Chamber of Commerce</h1>
+                <p>Empowering local businesses to thrive.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="current-events card">
+                <h2>Current Events</h2>
+                <ul>
+                    <li><strong>June 15:</strong> Tech Innovators Networking Breakfast</li>
+                    <li><strong>July 2:</strong> Small Business Taxation Seminar</li>
+                    <li><strong>August 10:</strong> Annual Harare Trade Fair</li>
+                </ul>
+            </section>
+
+            <section class="weather-section card">
+                <h2>Harare Weather</h2>
+                <div id="current-weather">
+                    </div>
+                <h3>3-Day Forecast</h3>
+                <div id="weather-forecast">
+                    </div>
+            </section>
+
+            <section class="spotlights card">
+                <h2>Member Spotlights</h2>
+                <div id="spotlight-container">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>Harare Chamber of Commerce</p>
+            <p>123 Samora Machel Ave, Harare</p>
+            <p>info@hararechamber.co.zw</p>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Farai Rwambiwa | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
