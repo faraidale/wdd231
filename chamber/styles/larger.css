@@ -1,115 +1,52 @@
+/* ========================================= */
+/* DESKTOP VIEW (Media Query over 768px)     */
+/* ========================================= */
 @media (min-width: 768px) {
-    #menu-button { display: none; }
-    nav { display: flex; flex-direction: row; justify-content: center; gap: 2rem; }
-    nav a { border-bottom: none; }
     
-    /* Grid View strictly enforced for desktop */
-    #directory-container.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-    
-    /* List View adjusted for desktop */
-    #directory-container.list section { flex-direction: row; justify-content: space-between; align-items: center; }
-    
-    footer { display: flex; justify-content: space-around; align-items: center; text-align: left; }
-}
+    /* Navigation sits side-by-side */
+    #menu-button {
+        display: none;
+    }
 
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
-/* --- W03 HOME PAGE: DESKTOP --- */
-.hero-image {
-    height: 500px; 
-}
+    nav a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+    }
 
-.hero-overlay {
-    width: 60%;
-    padding: 3rem;
-}
+    /* Hero Banner gets taller */
+    .hero-image {
+        height: 500px;
+    }
 
-.hero-overlay h1 {
-    font-size: 2.5rem;
-}
+    .page-title {
+        max-width: 1200px;
+        margin: 2rem auto 1rem auto;
+        text-align: left;
+    }
 
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    /* Top Row Layout: 3 Columns */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
 
-/* ========================================= */
-/* DESKTOP ALIGNMENT (Matches Wireframe)     */
-/* ========================================= */
-
-/* 1. Hero Image & Bottom-Right Button */
-.hero {
-    position: relative; 
-}
-
-.hero-image {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hero-btn {
-    position: absolute;
-    bottom: 20px; /* Pushes to bottom */
-    right: 20px;  /* Pushes to right */
-    background-color: #cccccc;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-
-.page-title {
-    max-width: 1200px;
-    margin: 1rem auto 0 auto; /* Centers the "Home" title */
-    padding: 0 1rem;
-}
-
-/* 2. Top Row (3 equal columns) */
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 1rem auto;
-    padding: 0 1rem;
-}
-
-/* 3. Bottom Row (3 equal columns for Spotlights) */
-.spotlight-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 1rem auto 2rem auto;
-    padding: 0 1rem;
-}
-
-/* 4. Match wireframe card headers */
-.card h2 {
-    background-color: #333; /* Dark header like the wireframe */
-    color: white;
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.card-content {
-    background-color: #e6e6e6; /* Light grey body like the wireframe */
-    padding: 1rem;
-    height: 100%; /* Keeps boxes even */
-}
-
-.spotlight-card {
-    background-color: #e6e6e6;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 5px;
+    /* Bottom Row Layout: 3 Columns */
+    .spotlight-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
 }
