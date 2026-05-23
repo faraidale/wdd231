@@ -141,10 +141,10 @@ function displaySpotlights(members) {
         card.innerHTML = `
             <h3 style="margin-top: 0;">${member.name}</h3>
             <p style="margin: 0; font-size: 0.9rem; color: #555;"><em>${levelText}</em></p>
-            <hr style="margin: 15px 0;">
+            <hr style="margin: 15px 0; border: 1px solid #ccc;">
             <p style="margin: 5px 0; font-size: 0.9rem;"><strong>EMAIL:</strong> info@${cleanUrl}</p>
             <p style="margin: 5px 0; font-size: 0.9rem;"><strong>PHONE:</strong> ${member.phone}</p>
-            <p style="margin: 5px 0; font-size: 0.9rem;"><strong>URL:</strong> <a href="${member.website}" target="_blank" style="color: #333; text-decoration: none;">${cleanUrl}</a></p>
+            <p style="margin: 5px 0; font-size: 0.9rem;"><strong>URL:</strong> <a href="${member.website}" target="_blank" style="color: var(--primary-color); text-decoration: none;">${cleanUrl}</a></p>
         `;
         container.appendChild(card);
     });
