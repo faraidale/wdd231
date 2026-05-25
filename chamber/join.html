@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harare Chamber of Commerce - Join</title>
+    
+    <meta name="description" content="Apply to join the Harare Chamber of Commerce today. Grow your business network and unlock exclusive benefits.">
+    <meta name="author" content="Farai Rwambiwa">
+    
+    <meta property="og:title" content="Harare Chamber of Commerce: Join Us Today">
+    <meta property="og:description" content="Apply to join the Harare Chamber of Commerce today. Grow your business network and unlock exclusive benefits.">
+    <meta property="og:image" content="https://faraidale.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://faraidale.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/home.js" type="module"></script>
+    <script src="scripts/join.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.svg" alt="Chamber Logo" width="50" height="50">
+            <span>Harare Chamber</span>
+        </div>
+        <button id="menu-button" aria-label="Menu">☰</button>
+    </header>
+    
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" class="active">Join</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+
+    <main class="join-grid">
+        <div class="form-container">
+            <h1 class="page-title">Chamber Membership Application</h1>
+            <form method="get" action="thankyou.html" class="join-form">
+                
+                <label>First Name*
+                    <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+                
+                <label>Last Name*
+                    <input type="text" name="last-name" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+                
+                <label>Organizational Title
+                    <input type="text" name="org-title" title="Must be at least 7 characters (letters, spaces, and hyphens only)" autocomplete="organization-title" pattern="^[a-zA-Z\- ]{7,}$">
+                </label>
+                
+                <label>Email Address*
+                    <input type="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="example@business.com" required>
+                </label>
+                
+                <label>Mobile Phone*
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+                
+                <label>Business/Organization Name*
+                    <input type="text" name="organization" title="Enter your business name" autocomplete="organization" required>
+                </label>
+                
+                <label>Membership Level*
+                    <select name="membership-level" title="Select a membership level" required>
+                        <option value="" disabled selected>Select a level...</option>
+                        <option value="np">Non-Profit (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                
+                <label>Business Description
+                    <textarea name="description" title="Provide a brief description of your business"></textarea>
+                </label>
+                
+                <input type="hidden" id="timestamp" name="timestamp">
+                
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+        </div>
+
+        <div class="cards-container">
+            <section class="membership-card">
+                <h2>Non-Profit</h2>
+                <p>For registered non-profit organizations.</p>
+                <button class="modal-trigger" data-modal="modal-np">View Benefits</button>
+            </section>
+            
+            <section class="membership-card">
+                <h2>Bronze</h2>
+                <p>Perfect for startups and sole proprietors.</p>
+                <button class="modal-trigger" data-modal="modal-bronze">View Benefits</button>
+            </section>
+            
+            <section class="membership-card">
+                <h2>Silver</h2>
+                <p>Excellent for established local businesses.</p>
+                <button class="modal-trigger" data-modal="modal-silver">View Benefits</button>
+            </section>
+            
+            <section class="membership-card">
+                <h2>Gold</h2>
+                <p>Premium access for corporate leaders.</p>
+                <button class="modal-trigger" data-modal="modal-gold">View Benefits</button>
+            </section>
+        </div>
+    </main>
+
+    <dialog id="modal-np">
+        <h2>Non-Profit Benefits</h2>
+        <p>Access to networking events and directory listing. No annual fee.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+    
+    <dialog id="modal-bronze">
+        <h2>Bronze Benefits</h2>
+        <p>Directory listing, access to training seminars, and community advertising.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-silver">
+        <h2>Silver Benefits</h2>
+        <p>All Bronze benefits, plus event discounts and a spotlight on the home page.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-gold">
+        <h2>Gold Benefits</h2>
+        <p>All Silver benefits, VIP event access, exclusive corporate sponsorships, and premium ad placement.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+
+    <footer>
+        <div class="footer-info">
+            <p>Harare Chamber of Commerce</p>
+            <p>123 Samora Machel Ave, Harare</p>
+            <p>info@hararechamber.co.zw</p>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; <span id="currentyear"></span> Farai Rwambiwa | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
