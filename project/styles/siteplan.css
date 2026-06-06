@@ -1,0 +1,90 @@
+/* ========================================= */
+/* VARIABLES (Matching the Plan's Schema)    */
+/* ========================================= */
+:root {
+    --bg-dark: #1E1E24;       /* Dark Slate */
+    --text-light: #F8F9FA;    /* Off-White */
+    --accent-blue: #00B4D8;   /* Electric Blue */
+    
+    --font-heading: 'Fira Code', monospace;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* ========================================= */
+/* BASE STYLES                               */
+/* ========================================= */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #151519; /* Slightly darker header */
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-blue);
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #2b2b36; /* Card-like background for sections */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-blue);
+}
+
+/* ========================================= */
+/* TYPOGRAPHY APPLICATION                    */
+/* ========================================= */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-blue);
+}
+
+p, li {
+    font-family: var(--font-body);
+}
+
+strong {
+    color: var(--accent-blue);
+}
+
+/* ========================================= */
+/* WIREFRAME LAYOUT                          */
+/* ========================================= */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px dashed #555;
+    background-color: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: #888;
+}
