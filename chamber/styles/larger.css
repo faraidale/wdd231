@@ -62,3 +62,44 @@
         align-items: start;
     }
 }
+
+/* ========================================= */
+/* DISCOVER PAGE (Tablet / Medium View)      */
+/* ========================================= */
+@media (min-width: 641px) {
+    .discover-grid {
+        /* Layout 2: Tablet (2 Columns) */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "c1 c2"
+            "c3 c4"
+            "c5 c6"
+            "c7 c8";
+    }
+
+    /* Required Image Hover Effect ONLY on larger screens */
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .discover-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+/* ========================================= */
+/* DISCOVER PAGE (Desktop / Large View)      */
+/* ========================================= */
+@media (min-width: 1025px) {
+    .discover-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Layout 3: Desktop Asymmetrical Grid to show advanced CSS skills */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "c1 c1 c2"
+            "c3 c4 c4"
+            "c5 c6 c7"
+            "c8 c8 c8";
+    }
+}
