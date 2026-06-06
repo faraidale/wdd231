@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+    <rect width="100%" height="100%" fill="#f4f4f9" stroke="#333" stroke-width="2"/>
+    
+    <rect x="0" y="0" width="800" height="60" fill="#dcdcdc" stroke="#333" stroke-width="1"/>
+    <text x="30" y="37" font-family="sans-serif" font-size="18" font-weight="bold" fill="#333">Logo</text>
+    <text x="450" y="36" font-family="sans-serif" font-size="14" fill="#333">Home    |    About    |    Projects    |    Contact</text>
+    
+    <rect x="30" y="80" width="740" height="150" fill="#e8e8e8" stroke="#333" stroke-width="1" rx="5"/>
+    <line x1="30" y1="80" x2="770" y2="230" stroke="#ccc" stroke-width="1"/>
+    <line x1="770" y1="80" x2="30" y2="230" stroke="#ccc" stroke-width="1"/>
+    <text x="340" y="160" font-family="sans-serif" font-size="18" fill="#555">Hero Banner / Intro</text>
+
+    <rect x="30" y="260" width="220" height="150" fill="#fff" stroke="#333" stroke-width="1" rx="5"/>
+    <text x="105" y="340" font-family="sans-serif" font-size="16" fill="#555">Project 1</text>
+
+    <rect x="290" y="260" width="220" height="150" fill="#fff" stroke="#333" stroke-width="1" rx="5"/>
+    <text x="365" y="340" font-family="sans-serif" font-size="16" fill="#555">Project 2</text>
+
+    <rect x="550" y="260" width="220" height="150" fill="#fff" stroke="#333" stroke-width="1" rx="5"/>
+    <text x="625" y="340" font-family="sans-serif" font-size="16" fill="#555">Project 3</text>
+
+    <rect x="0" y="440" width="800" height="60" fill="#dcdcdc" stroke="#333" stroke-width="1"/>
+    <text x="375" y="475" font-family="sans-serif" font-size="14" fill="#333">Footer</text>
+</svg>
