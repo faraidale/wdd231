@@ -278,3 +278,75 @@ dialog::backdrop {
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* ========================================= */
+/* DISCOVER PAGE (Mobile View)               */
+/* ========================================= */
+.visit-message {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Map each card to a CSS Grid Area Name */
+.discover-card:nth-child(1) { grid-area: c1; }
+.discover-card:nth-child(2) { grid-area: c2; }
+.discover-card:nth-child(3) { grid-area: c3; }
+.discover-card:nth-child(4) { grid-area: c4; }
+.discover-card:nth-child(5) { grid-area: c5; }
+.discover-card:nth-child(6) { grid-area: c6; }
+.discover-card:nth-child(7) { grid-area: c7; }
+.discover-card:nth-child(8) { grid-area: c8; }
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    /* Layout 1: Mobile (1 Column) */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "c1" "c2" "c3" "c4"
+        "c5" "c6" "c7" "c8";
+}
+
+.discover-card {
+    background-color: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.discover-card figure {
+    margin: 0;
+    padding: 0;
+}
+
+.discover-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* Do NOT add hover effects here (Mobile) per rubric */
+}
+
+.discover-card address {
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.learn-more-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
