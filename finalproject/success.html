@@ -1,0 +1,13 @@
+<main style="max-width: 600px; margin: 4rem auto; text-align: center;">
+    <h1 style="color: var(--accent);">Message Sent!</h1>
+    <div id="results" style="background: var(--card-bg); padding: 2rem; border-radius: 12px; margin-top: 2rem;"></div>
+</main>
+<script>
+    // Fulfills Form Action Page requirement
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('results').innerHTML = `
+        <p><strong>Name:</strong> ${urlParams.get('name')}</p>
+        <p><strong>Email:</strong> ${urlParams.get('email')}</p>
+        <p><strong>Message:</strong> ${urlParams.get('message')}</p>
+    `;
+</script>
