@@ -1,0 +1,17 @@
+[
+  { "id": 1, "title": "V-Art Database", "category": "SQL", "description": "Relational database schema tracking artwork periods, keywords, and artist details.", "tech": "MySQL, Relational Algebra" },
+  { "id": 2, "title": "Magazine Subscriptions", "category": "SQL", "description": "Complex JOIN queries linking subscriber data with magazine inventory.", "tech": "SQL, Data Normalization" },
+  { "id": 3, "title": "Employee Retention Tracker", "category": "SQL", "description": "Data analysis queries tracking salaries and demographic distribution across departments.", "tech": "SQL, Aggregate Functions" },
+  { "id": 4, "title": "Baldwin Bikes Matrix", "category": "SQL", "description": "Inventory management tracking stock levels and identifying immediate reorder needs.", "tech": "MySQL, Data Analytics" },
+  { "id": 5, "title": "Tire Volume Calculator", "category": "Python", "description": "Algorithm to calculate tire volume based on standard industry dimensions.", "tech": "Python, Math Libraries" },
+  { "id": 6, "title": "Mindfulness App", "category": "C#", "description": "Object-oriented terminal application designed to guide users through breathing exercises.", "tech": "C#, OOP, Encapsulation" },
+  { "id": 7, "title": "Harare Chamber Site", "category": "Frontend", "description": "Responsive business directory built with CSS Grid and asynchronous data fetching.", "tech": "HTML5, CSS3, JavaScript" },
+  { "id": 8, "title": "Solar Monitor System", "category": "Python", "description": "Script designed to track 12.1v battery readouts and manage off-grid load shedding.", "tech": "Python, IoT concepts" },
+  { "id": 9, "title": "Cricket Stat Tracker", "category": "Data", "description": "Probability model calculating gem spending efficiency and pity system odds.", "tech": "Python, Statistics" },
+  { "id": 10, "title": "Book Mockup Engine", "category": "Frontend", "description": "Dynamic web tool rendering 3D book covers and promotional layouts.", "tech": "JavaScript, DOM Manipulation" },
+  { "id": 11, "title": "Chess Elo Predictor", "category": "Data", "description": "Algorithm analyzing Caro-Kann and Sicilian Defense opening success rates.", "tech": "Python, Data Modeling" },
+  { "id": 12, "title": "Indigenous Seed Catalog", "category": "SQL", "description": "Database preserving traditional agriculture techniques and seed preservation data.", "tech": "MySQL, Database Design" },
+  { "id": 13, "title": "AI Image Wrapper", "category": "Frontend", "description": "Client interface for sending detailed prompts to generative image APIs.", "tech": "JavaScript, REST APIs" },
+  { "id": 14, "title": "Web Discover Page", "category": "Frontend", "description": "Asymmetrical CSS grid layout showcasing local civic landmarks.", "tech": "CSS Grid, Lazy Loading" },
+  { "id": 15, "title": "Resume Builder App", "category": "C#", "description": "Polymorphic application formatting professional CVs and business quotations.", "tech": "C#, Class Inheritance" }
+]
