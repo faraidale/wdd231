@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farai Rwambiwa | Developer Portfolio</title>
+    <meta name="description" content="Software Developer portfolio showcasing Python, C#, SQL, and JavaScript projects.">
+    <meta name="author" content="Farai Rwambiwa">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script src="scripts/app.mjs" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">FR<span>.dev</span></div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="nav-menu">
+            <a href="index.html" class="active">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm Farai.</h1>
+                <p>I build dynamic, scalable applications using Python, C#, SQL, and modern JavaScript.</p>
+                <div class="local-storage-tracker">
+                    Portfolio Views: <span id="view-count" class="pulse-text">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="SQL">SQL</button>
+            <button class="filter-btn" data-filter="Frontend">Frontend</button>
+            <button class="filter-btn" data-filter="Python">Python</button>
+            <button class="filter-btn" data-filter="C#">C#</button>
+        </section>
+
+        <section id="project-grid" class="grid"></section>
+    </main>
+
+    <dialog id="project-modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
+            <button id="close-modal">Close Project</button>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Farai Rwambiwa | WDD 231</p>
+        <a href="https://youtube.com/your-video-link" target="_blank">View JS Demonstration Video</a>
+    </footer>
+</body>
+</html>
