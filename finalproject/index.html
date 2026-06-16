@@ -7,9 +7,18 @@
     <meta name="description" content="Software Developer portfolio showcasing Python, C#, SQL, and JavaScript projects.">
     <meta name="author" content="Farai Rwambiwa">
     
+    <meta property="og:title" content="Farai Rwambiwa | Developer Portfolio">
+    <meta property="og:description" content="A dynamic software development portfolio featuring high-end web architecture, C#, Python, and SQL databases.">
+    <meta property="og:image" content="https://faraidale.github.io/wdd231/finalproject/images/profile.webp">
+    <meta property="og:url" content="https://faraidale.github.io/wdd231/finalproject/index.html">
+    
+    <link rel="icon" href="images/profile.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/main.css">
     
     <script src="scripts/app.mjs" type="module"></script>
@@ -27,7 +36,6 @@
     <main>
         <section class="hero">
             <div class="hero-text">
-                
                 <div class="avatar-container">
                     <img src="images/profile.webp" alt="Farai Rwambiwa" class="profile-pic">
                 </div>
@@ -45,20 +53,20 @@
             </div>
         </section>
 
-        <section class="controls">
+        <div class="controls">
             <button class="filter-btn active" data-filter="all">🌐 All</button>
             <button class="filter-btn" data-filter="SQL">🗄️ SQL</button>
             <button class="filter-btn" data-filter="Frontend">🖥️ Frontend</button>
             <button class="filter-btn" data-filter="Python">🐍 Python</button>
             <button class="filter-btn" data-filter="C#">🎯 C#</button>
-        </section>
+        </div>
 
-        <section id="project-grid" class="grid"></section>
+        <div id="project-grid" class="grid"></div>
     </main>
 
     <dialog id="project-modal">
         <div class="modal-content">
-            <h2 id="modal-title"></h2>
+            <h2 id="modal-title">Project Details</h2>
             <p id="modal-desc"></p>
             <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
             <button id="close-modal">Close Project</button>
@@ -67,34 +75,7 @@
 
     <footer>
         <p>&copy; <span id="year"></span> Farai Rwambiwa | WDD 231</p>
-        <a href="i will enter my_LOOM_LINK_HERE kkk" target="_blank" class="video-link">▶ Watch JS Demo</a>
-    </footer>
-</body>
-</html>
-
-        <section class="controls">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="SQL">SQL</button>
-            <button class="filter-btn" data-filter="Frontend">Frontend</button>
-            <button class="filter-btn" data-filter="Python">Python</button>
-            <button class="filter-btn" data-filter="C#">C#</button>
-        </section>
-
-        <section id="project-grid" class="grid"></section>
-    </main>
-
-    <dialog id="project-modal">
-        <div class="modal-content">
-            <h2 id="modal-title"></h2>
-            <p id="modal-desc"></p>
-            <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
-            <button id="close-modal">Close Project</button>
-        </div>
-    </dialog>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Farai Rwambiwa | WDD 231</p>
-        <a href="https://youtube.com/your-video-link" target="_blank">View JS Demonstration Video</a>
+        <a href="https://loom.com/" target="_blank" class="video-link">▶ Watch JS Demo</a>
     </footer>
 </body>
 </html>
