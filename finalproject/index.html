@@ -27,13 +27,50 @@
     <main>
         <section class="hero">
             <div class="hero-text">
+                
+                <div class="avatar-container">
+                    <img src="images/profile.webp" alt="Farai Rwambiwa" class="profile-pic">
+                </div>
+
+                <div class="typewriter">
+                    <p>> initializing_developer_mode...</p>
+                </div>
+
                 <h1>Hi, I'm Farai.</h1>
                 <p>I build dynamic, scalable applications using Python, C#, SQL, and modern JavaScript.</p>
+                
                 <div class="local-storage-tracker">
                     Portfolio Views: <span id="view-count" class="pulse-text">0</span>
                 </div>
             </div>
         </section>
+
+        <section class="controls">
+            <button class="filter-btn active" data-filter="all">🌐 All</button>
+            <button class="filter-btn" data-filter="SQL">🗄️ SQL</button>
+            <button class="filter-btn" data-filter="Frontend">🖥️ Frontend</button>
+            <button class="filter-btn" data-filter="Python">🐍 Python</button>
+            <button class="filter-btn" data-filter="C#">🎯 C#</button>
+        </section>
+
+        <section id="project-grid" class="grid"></section>
+    </main>
+
+    <dialog id="project-modal">
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <p><strong>Tech Stack:</strong> <span id="modal-tech"></span></p>
+            <button id="close-modal">Close Project</button>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Farai Rwambiwa | WDD 231</p>
+        <a href="i will enter my_LOOM_LINK_HERE kkk" target="_blank" class="video-link">▶ Watch JS Demo</a>
+    </footer>
+</body>
+</html>
 
         <section class="controls">
             <button class="filter-btn active" data-filter="all">All Projects</button>
