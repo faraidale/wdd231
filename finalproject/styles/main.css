@@ -203,14 +203,28 @@ nav a:hover, nav a.active { color: var(--accent); }
     border-radius: 12px;
     padding: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03); 
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    /* The permanent slow-motion floating animation */
+    animation: cardFloat 5s ease-in-out infinite;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
+/* Stagger the animation so they float at different times (alternating) */
+.card:nth-child(even) { animation-delay: 1.5s; }
+.card:nth-child(3n) { animation-delay: 3s; }
+
+/* The desktop hover effect stops the float and makes it pop */
 .card:hover {
+    animation: none; 
     transform: translateY(-12px) scale(1.02); 
     border-color: var(--accent);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow), 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* The actual up-and-down keyframe logic */
+@keyframes cardFloat {
+    0% { transform: translateY(0px); box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03); }
+    50% { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(14, 165, 233, 0.2); border-color: rgba(14, 165, 233, 0.4); }
+    100% { transform: translateY(0px); box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03); }
 }
 
 .card h3 {
@@ -221,6 +235,14 @@ nav a:hover, nav a.active { color: var(--accent); }
 .badge {
     display: inline-block;
     background: #0ea5e920;
+    color: var(--accent);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    margin-bottom: 1rem;
+}
+
     color: var(--accent);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
