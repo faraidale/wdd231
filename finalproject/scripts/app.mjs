@@ -82,3 +82,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Start
 init();
+
+// Set current year and last modified date in the footer
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = "Last Modification: " + document.lastModified;
+
