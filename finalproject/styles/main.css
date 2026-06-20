@@ -304,3 +304,104 @@ footer {
     nav a { margin: 1rem 2rem; }
 }
 
+/* ==========================================================================
+   Contact Page Styles (Fixed for 100% Accessibility & Neon Glow)
+   ========================================================================== */
+
+.contact-body {
+    background-color: #0f172a !important;
+}
+
+.contact-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 80vh;
+}
+
+/* Card Container with Subtle Ambient Glow */
+.contact-card {
+    width: 100%;
+    max-width: 600px;
+    background: #1e293b;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h2 {
+    color: #0ea5e9;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: left;
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* White Input Fields with Dark Text */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #ffffff;
+    color: #0f172a;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Vibrant Focus Glow when User Clicks Input */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+}
+
+/* Accessible Neon Blue Submit Button with Dark Text */
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #0ea5e9;
+    color: #0f172a; /* Changed to dark slate for high-contrast accessibility */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* Powerful Button Glow on Hover */
+.submit-btn:hover {
+    background: #38bdf8;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.8);
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
