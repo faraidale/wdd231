@@ -228,10 +228,9 @@ nav a:hover, nav a.active { color: var(--accent); }
 
 .badge {
     display: inline-block;
-    /* --- NEW CONTRAST COLORS --- */
-    background: #1e293b; 
-    color: #ffffff;      
-    border: 1px solid var(--accent); 
+    background: #1e293b; /* Dark, solid background */
+    color: #ffffff;      /* High-contrast pure white text */
+    border: 1px solid var(--accent); /* Elegant glow border */
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
