@@ -1,4 +1,15 @@
 /* ========================================= */
+/* GLOBAL RESET                              */
+/* ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================= */
 /* VARIABLES                                 */
 /* ========================================= */
 :root {
@@ -228,15 +239,16 @@ nav a:hover, nav a.active { color: var(--accent); }
 
 .badge {
     display: inline-block;
-    background: #1e293b; /* Dark, solid background */
-    color: #ffffff;      /* High-contrast pure white text */
-    border: 1px solid var(--accent); /* Elegant glow border */
+    background: #1e293b;
+    color: #ffffff;
+    border: 1px solid var(--accent);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
     font-family: var(--font-mono);
     margin-bottom: 1rem;
 }
+
 /* ========================================= */
 /* MODAL DIALOG                              */
 /* ========================================= */
@@ -252,7 +264,6 @@ dialog {
 
 dialog::backdrop { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(4px); }
 
-/* Fixed color contrast for modal button */
 #close-modal {
     background: var(--accent);
     color: var(--bg-dark);
@@ -304,7 +315,7 @@ footer {
     nav a { margin: 1rem 2rem; }
 }
 
- /* ========================================= */
+/* ========================================= */
 /* CONTACT PAGE SPECIFIC STYLES             */
 /* ========================================= */
 body.contact-page {
@@ -385,14 +396,14 @@ body.contact-page .form-group textarea:focus {
     border-color: var(--accent);
 }
 
-/* ===== Accessibility fix: white button with dark text ===== */
+/* Accessible button: white with dark text */
 body.contact-page .submit-btn {
     width: 100%;
     padding: 1rem;
     background: #ffffff;
-    color: var(--bg-dark);               /* #0f172a → contrast ratio ≥ 12:1 */
+    color: var(--bg-dark);
     font-weight: bold;
-    border: 2px solid var(--accent);      /* keeps the neon border */
+    border: 2px solid var(--accent);
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
@@ -401,7 +412,7 @@ body.contact-page .submit-btn {
 }
 
 body.contact-page .submit-btn:hover {
-    background: #e2e8f0;                 /* very light grey */
+    background: #e2e8f0;
     color: var(--bg-dark);
 }
 
