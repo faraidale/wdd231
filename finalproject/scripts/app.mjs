@@ -32,9 +32,60 @@ function renderProjects(projects) {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-            <h3>${project.title}</h3>
+            <h2>${project.title}</h2>
             <span class="badge">${project.category}</span>
             <p>${project.description}</p>
+        `;
+        
+        // Modal Event Listener
+        card.addEventListener('click', () => {
+            document.getElementById('modal-title').textContent = project.title;
+            document.getElementById('modal-desc').textContent = project.description;
+            document.getElementById('modal-tech').textContent = project.tech;
+            modal.showModal();
+        });
+        
+        grid.appendChild(card);
+    });
+}
+
+// 5. Array Methods (Filter)
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        
+        const filter = e.target.getAttribute('data-filter');
+        if (filter === 'all') {
+            renderProjects(allProjects);
+        } else {
+            const filtered = allProjects.filter(p => p.category === filter);
+            renderProjects(filtered);
+        }
+    });
+});
+
+// 6. Close Modal
+if (closeModal) {
+    closeModal.addEventListener('click', () => modal.close());
+}
+
+// 7. Mobile Menu
+const menuBtn = document.getElementById('menu-btn');
+const navMenu = document.getElementById('nav-menu');
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
+}
+
+// 8. Dynamic Year & Last Modified Footer
+const yearSpan = document.getElementById('year');
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+const lastMod = document.getElementById('lastModified');
+if (lastMod) lastMod.textContent = "Last Modification: " + document.lastModified;
+
+// Start
+init();            <p>${project.description}</p>
         `;
         
         // Modal Event Listener
