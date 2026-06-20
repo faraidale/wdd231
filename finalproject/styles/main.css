@@ -228,15 +228,16 @@ nav a:hover, nav a.active { color: var(--accent); }
 
 .badge {
     display: inline-block;
-    background: #0ea5e920;
-    color: var(--accent);
+    /* --- NEW CONTRAST COLORS --- */
+    background: #1e293b; 
+    color: #ffffff;      
+    border: 1px solid var(--accent); 
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
     font-family: var(--font-mono);
     margin-bottom: 1rem;
 }
-
 /* ========================================= */
 /* MODAL DIALOG                              */
 /* ========================================= */
