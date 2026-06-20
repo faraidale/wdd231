@@ -305,44 +305,52 @@ footer {
 }
 
 /* ==========================================================================
-   Contact Page Styles (Fixed for 100% Accessibility & Neon Glow)
+   Contact Page Styles (Fully Integrated & 100% Accessible)
    ========================================================================== */
 
-.contact-body {
-    background-color: #0f172a !important;
-}
-
-.contact-page {
+/* Full page layout wrapper to center the card */
+.contact-page-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
-    min-height: 80vh;
+    min-height: calc(100vh - 180px); /* Accounts for header and footer spacing */
+    padding: 3rem 1rem;
+    background-color: var(--bg-dark);
 }
 
-/* Card Container with Subtle Ambient Glow */
+/* Card Container with Signature Ambient Glow Animation */
 .contact-card {
     width: 100%;
-    max-width: 600px;
-    background: #1e293b;
-    padding: 2.5rem;
+    max-width: 550px;
+    background: var(--card-bg);
+    border: 1px solid #334155;
     border-radius: 12px;
-    border: 1px solid rgba(14, 165, 233, 0.3);
-    box-shadow: 0 0 25px rgba(14, 165, 233, 0.15), 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    animation: contactCardPulse 4s ease-in-out infinite;
+}
+
+/* Reusing your native card pulse logic for a unified look */
+@keyframes contactCardPulse {
+    0% { box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03); border-color: #334155; }
+    50% { box-shadow: 0 4px 25px rgba(14, 165, 233, 0.25), inset 0 0 10px rgba(14, 165, 233, 0.05); border-color: rgba(14, 165, 233, 0.4); }
+    100% { box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03); border-color: #334155; }
 }
 
 .contact-card h2 {
-    color: #0ea5e9;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+    font-size: 2.2rem;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: left;
-    text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
 .form-group {
@@ -353,55 +361,70 @@ footer {
 }
 
 .form-group label {
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-/* White Input Fields with Dark Text */
+/* Developer Theme Dark Inputs */
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    background: #ffffff;
-    color: #0f172a;
-    border: 2px solid #cbd5e1;
-    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    border: 1px solid #334155;
+    border-radius: 8px;
     font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--font-sans);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Vibrant Focus Glow when User Clicks Input */
+/* High-contrast placeholder text color for accessibility guidelines */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
+}
+
+/* Active Focus Input Glow */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #0ea5e9;
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
-/* Accessible Neon Blue Submit Button with Dark Text */
+/* High-Contrast Accessible Submit Button */
 .submit-btn {
     width: 100%;
     padding: 1rem;
-    background: #0ea5e9;
-    color: #0f172a; /* Changed to dark slate for high-contrast accessibility */
+    background: var(--accent);
+    color: var(--bg-dark); /* Dark text on neon blue ensures clean color contrast */
     font-weight: bold;
+    font-family: var(--font-mono);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
     margin-top: 0.5rem;
-    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
-/* Powerful Button Glow on Hover */
 .submit-btn:hover {
     background: #38bdf8;
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.8);
+    box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .submit-btn:active {
-    transform: scale(0.99);
+    transform: scale(0.98);
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 1.75rem 1.25rem;
+    }
+    .contact-card h2 {
+        font-size: 1.8rem;
+    }
 }
