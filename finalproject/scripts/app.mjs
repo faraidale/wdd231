@@ -39,10 +39,15 @@ function renderProjects(projects) {
         
         // Modal Event Listener
         card.addEventListener('click', () => {
-            document.getElementById('modal-title').textContent = project.title;
-            document.getElementById('modal-desc').textContent = project.description;
-            document.getElementById('modal-tech').textContent = project.tech;
-            modal.showModal();
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalTech = document.getElementById('modal-tech');
+            
+            if (modalTitle) modalTitle.textContent = project.title;
+            if (modalDesc) modalDesc.textContent = project.description;
+            if (modalTech) modalTech.textContent = project.tech;
+            
+            if (modal) modal.showModal();
         });
         
         grid.appendChild(card);
@@ -50,91 +55,46 @@ function renderProjects(projects) {
 }
 
 // 5. Array Methods (Filter)
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        
-        const filter = e.target.getAttribute('data-filter');
-        if (filter === 'all') {
-            renderProjects(allProjects);
-        } else {
-            const filtered = allProjects.filter(p => p.category === filter);
-            renderProjects(filtered);
-        }
+if (filterBtns) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            
+            const filter = e.target.getAttribute('data-filter');
+            if (filter === 'all') {
+                renderProjects(allProjects);
+            } else {
+                const filtered = allProjects.filter(p => p.category === filter);
+                renderProjects(filtered);
+            }
+        });
     });
-});
+}
 
 // 6. Close Modal
-if (closeModal) {
+if (closeModal && modal) {
     closeModal.addEventListener('click', () => modal.close());
 }
 
 // 7. Mobile Menu
 const menuBtn = document.getElementById('menu-btn');
 const navMenu = document.getElementById('nav-menu');
-if (menuBtn) {
+if (menuBtn && navMenu) {
     menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
 }
 
-// 8. Dynamic Year & Last Modified Footer
+// 8. Dynamic Year & Last Modified Footer (Safely Guarded)
 const yearSpan = document.getElementById('year');
-if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
 
 const lastMod = document.getElementById('lastModified');
-if (lastMod) lastMod.textContent = "Last Modification: " + document.lastModified;
-
-// Start
-init();            <p>${project.description}</p>
-        `;
-        
-        // Modal Event Listener
-        card.addEventListener('click', () => {
-            document.getElementById('modal-title').textContent = project.title;
-            document.getElementById('modal-desc').textContent = project.description;
-            document.getElementById('modal-tech').textContent = project.tech;
-            modal.showModal();
-        });
-        
-        grid.appendChild(card);
-    });
+if (lastMod) {
+    lastMod.textContent = "Last Modification: " + document.lastModified;
 }
 
-// 5. Array Methods (Filter)
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        
-        const filter = e.target.getAttribute('data-filter');
-        if (filter === 'all') {
-            renderProjects(allProjects);
-        } else {
-            const filtered = allProjects.filter(p => p.category === filter);
-            renderProjects(filtered);
-        }
-    });
-});
-
-// 6. Close Modal
-if (closeModal) {
-    closeModal.addEventListener('click', () => modal.close());
-}
-
-// 7. Mobile Menu
-const menuBtn = document.getElementById('menu-btn');
-const navMenu = document.getElementById('nav-menu');
-if (menuBtn) {
-    menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
-}
-
-// 8. Dynamic Year Footer
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Start
+// Start the Application
 init();
-
-// Set current year and last modified date in the footer
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = "Last Modification: " + document.lastModified;
 
