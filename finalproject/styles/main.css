@@ -304,4 +304,107 @@ footer {
     nav a { margin: 1rem 2rem; }
 }
 
- 
+ /* ========================================= */
+/* CONTACT PAGE SPECIFIC STYLES             */
+/* ========================================= */
+body.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.contact-page .contact-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Card with neon glow */
+body.contact-page .contact-card {
+    width: 100%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 0 25px var(--accent-glow);
+    transition: box-shadow 0.3s ease;
+}
+
+body.contact-page .contact-card:hover {
+    box-shadow: 0 0 40px var(--accent-glow), 0 0 15px rgba(14, 165, 233, 0.2);
+}
+
+body.contact-page .contact-card h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* Form layout */
+body.contact-page .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+body.contact-page .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+body.contact-page .form-group label {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Input fields: white background, dark text */
+body.contact-page .form-group input,
+body.contact-page .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #ffffff;
+    color: var(--bg-dark);
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+body.contact-page .form-group input:focus,
+body.contact-page .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* ===== Accessibility fix: white button with dark text ===== */
+body.contact-page .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ffffff;
+    color: var(--bg-dark);               /* #0f172a → contrast ratio ≥ 12:1 */
+    font-weight: bold;
+    border: 2px solid var(--accent);      /* keeps the neon border */
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+body.contact-page .submit-btn:hover {
+    background: #e2e8f0;                 /* very light grey */
+    color: var(--bg-dark);
+}
+
+body.contact-page .submit-btn:active {
+    transform: scale(0.99);
+}
