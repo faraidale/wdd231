@@ -4,9 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | FR.dev</title>
-    <link rel="stylesheet" href="main.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(15, 23, 42, 0.9);
+            border-bottom: 1px solid #334155;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #f8fafc;
+            text-decoration: none;
+        }
+        .logo span { color: #0ea5e9; }
+        .contact-page {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .contact-card {
+            width: 100%;
+            max-width: 600px;
+            background: #1e293b;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+        .contact-card:hover {
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.55), 0 0 15px rgba(14, 165, 233, 0.2);
+        }
+        .contact-card h2 {
+            color: #0ea5e9;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: #ffffff;
+            color: #0f172a;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0ea5e9;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #ffffff;
+            color: #0f172a;
+            font-weight: bold;
+            border: 2px solid #0ea5e9;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .submit-btn:hover {
+            background: #e2e8f0;
+        }
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+    </style>
 </head>
-<body class="contact-page">
+<body>
 
     <header>
         <a href="index.html" class="logo">FR<span>.dev</span></a>
@@ -15,26 +121,20 @@
     <main class="contact-page">
         <section class="contact-card">
             <h2>Let's Talk Code</h2>
-            
             <form method="get" action="success.html" class="contact-form">
-                
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
-
                 <div class="form-group">
                     <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
-
                 <div class="form-group">
                     <label for="message">Project Details</label>
                     <textarea id="message" name="message" placeholder="Project Details" rows="5" required></textarea>
                 </div>
-
                 <button type="submit" class="submit-btn">Send Message</button>
-                
             </form>
         </section>
     </main>
