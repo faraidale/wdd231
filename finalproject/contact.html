@@ -1,52 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | FR.dev</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-
-    <header>
-        <a href="index.html" class="logo" style="color: var(--text-main); text-decoration: none;">FR<span>.dev</span></a>
-        <button id="menu-btn">&#9776;</button>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
-    </header>
-
-    <main class="contact-page-container">
-        <section class="contact-card">
-            <h2>Let's Talk Code</h2>
+<main class="contact-page-container">
+    <div class="form-card">
+        <h2>Let's Talk Code</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
             
-            <form method="get" action="success.html" class="contact-form">
-                
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Project Details</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-                
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 FR.dev. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="details">Project Details</label>
+                <textarea id="details" name="details" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</main>
